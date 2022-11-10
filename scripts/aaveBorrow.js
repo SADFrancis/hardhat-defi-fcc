@@ -27,10 +27,6 @@ async function main() {
     // get conversion rate
     const daiPrice = await getDAIPrice();
 
-    //const trueAmountDaiToBorrow = availableBorrowsETH.toString() * (1 / daiPrice);
-    //const trueAmountDaiToBorrowWei = ethers.utils.parseEther(trueAmountDaiToBorrow.toString());
-
-
     const amountDaiToBorrow = availableBorrowsETH.toString() * 0.95 * (1 / daiPrice);
     const amountDaiToBorrowWei = ethers.utils.parseEther(amountDaiToBorrow.toString());
 
